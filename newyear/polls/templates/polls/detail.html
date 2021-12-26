@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вопросы опроса</title>
+</head>
+<body>
+<form action="{% url 'polls:vote' question.id %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>=== {{ question.question_title }} ===</h1></legend>
+    <label for="choicetext">{{ question.question_text }}</label><br>
+    <input type="text" id="choicetext" name="choicetext" size="80"><br>
+    <label for="choicetext2">{{ question.question_text2 }}</label><br>
+    <input type="text" id="choicetext2" name="choicetext2" size="80"><br>
+    <label for="choicetext3">{{ question.question_text3 }}</label><br>
+    <input type="text" id="choicetext3" name="choicetext3" size="80"><br>
+    <label for="choicetext4">{{ question.question_text4 }}</label><br>
+    <input type="text" id="choicetext4" name="choicetext4" size="80"><br>
+</fieldset>
+<input type="submit" value="Отправить ответы">
+</form>
+
+</body>
+</html>

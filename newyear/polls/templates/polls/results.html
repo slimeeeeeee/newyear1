@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ваш ответ</title>
+</head>
+<body>
+<h1>{{ question.question_title }}</h1>
+
+<b>Ваш номер ответа: <b>{{ question.votes }}</b>
+
+<ul>
+    <li><em>{{ question.question_text }}</em> -- <b>{{ choice.choice_text }}</b></li>
+    <li><em>{{ question.question_text2 }}</em> -- <b>{{ choice.choice_text2 }}</b></li>
+    <li><em>{{ question.question_text3 }}</em> -- <b>{{ choice.choice_text3 }}</b></li>
+    <li><em>{{ question.question_text4 }}</em> -- <b>{{ choice.choice_text4 }}</b></li>
+</ul>
+
+<h2>Спасибо за ответы!</h2>
+
+</body>
+</html>
